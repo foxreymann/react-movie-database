@@ -17,6 +17,11 @@ const movies = [
     id: 3,
     title: 'Top Gear'
   },
+  {
+    id: 4,
+    title: 'Married with children',
+    desc: 'You know, Al, Al Bundy'
+  },
 ]
 
 export default class App extends Component {
@@ -26,7 +31,7 @@ export default class App extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
         </header>
-        {movies.map(movie => <Movie key={movie.id} movie={movie} />)}
+        {movies.map(movie => <Movie key={movie.id} movie={movie} desc={movie.desc} />)}
       </div>
     );
   }
