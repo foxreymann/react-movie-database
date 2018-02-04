@@ -10,16 +10,17 @@ import './App.css';
 import Movies from './Movies'
 
 const App = () =>
-      <Router>
-        <div className="App">
-          <header className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-          </header>
-          <Switch>
-            <Route path='/test' component={Test} />
-          </Switch>
-        </div>
-      </Router>
+  <Router>
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+      </header>
+      <Switch>
+        <Route exact path='/' component={Movies} />
+        <Route path='/test' component={Test} />
+      </Switch>
+    </div>
+  </Router>
 
 export default App
 
