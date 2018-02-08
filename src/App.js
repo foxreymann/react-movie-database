@@ -20,12 +20,12 @@ const App = () =>
       </header>
       <Switch>
         <Route exact path='/' component={Movies} />
-        <Route path='/test' component={Test} />
+        <Route path='/:id' component={Test} />
       </Switch>
     </div>
   </Router>
 
 export default App
 
-const Test = () =>
-  <h1>TEST</h1>
+const Test = ({ match }) =>
+  <h1>{match.params.id}</h1>
